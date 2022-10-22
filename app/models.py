@@ -1,3 +1,4 @@
+from email.policy import default
 from pydoc import describe
 from django.db import models
 
@@ -22,7 +23,7 @@ class Todoapp(models.Model):
     status = models.CharField(max_length = 25,choices = status_choice,default ="PENDING")
     deadline = models.DateTimeField(null=True,blank=True)
     color = models.CharField(max_length = 15,choices = color_choice,default = "BLACK")
-    is_important = models.BooleanField()
+    is_important = models.BooleanField(default=False)
 
     
 
