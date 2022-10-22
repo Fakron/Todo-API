@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-#2vgg^tj(tbla^#i42y-9yl44^ql20+6y4(m@0r2d#z@$yo6q&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://todo-api-production-59d5.up.railway.app']
 
 
 # Application definition
@@ -64,6 +64,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:8000",
     "http://127.0.0.1:3000",
     "https://fulltodo.netlify.app",
+    "https://todo-api-production-59d5.up.railway.app",
 ]
 
 ROOT_URLCONF = "todo_app.urls"
