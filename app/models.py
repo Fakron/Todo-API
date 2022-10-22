@@ -22,7 +22,7 @@ class Todoapp(models.Model):
     status = models.CharField(max_length = 25,choices = status_choice,default ="PENDING")
     deadline = models.DateTimeField(null=True,blank=True)
     color = models.CharField(max_length = 15,choices = color_choice,default = "BLACK")
-    Is_important = models.BooleanField()
+    is_important = models.BooleanField()
 
     
 

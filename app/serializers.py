@@ -11,5 +11,5 @@ class TodoappSerializers(serializers.ModelSerializer):
             'status',
             'deadline',
             'color',
-            'Is_important'
+            'is_important'
         ]
