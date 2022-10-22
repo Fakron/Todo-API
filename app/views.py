@@ -15,26 +15,7 @@ class TodoListCreateview(generics.ListCreateAPIView):
     filterset_fields = ['Is_important']
 
 
-
-class TodoDetailsViewAPI(generics.RetrieveAPIView):
-
-    queryset = Todoapp.objects.all()
-    serializer_class = TodoappSerializers
-
-
-class TodoUpdateViewAPI(generics.UpdateAPIView):
-
-    queryset = Todoapp.objects.all()
-    serializer_class = TodoappSerializers
-    lookup_field = "pk"
-
-    def perform_update(self,serializer):
-        instance = serializer.save()
-        if not instance.content:
-            instance.content = instance.title
-
-
-class TodoDeleteViewAPI(generics.DestroyAPIView):
+class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
 
     queryset = Todoapp.objects.all()
     serializer_class = TodoappSerializers

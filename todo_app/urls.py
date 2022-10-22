@@ -28,5 +28,5 @@ urlpatterns = [
         template_name='docs.html',
         extra_context = {'schema_url':'api_schema'}
     ),name='swagger-ui'),
-    path("api/todo",include('app.urls'))
+    path("api/todo/",include('app.urls'))
 ]
