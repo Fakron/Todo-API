@@ -9,14 +9,14 @@ from rest_framework import status
 
 class TodoListCreateview(generics.ListCreateAPIView):
     
-    queryset = Todoapp.objects.all()
+    queryset = Todoapp.objects.all().order_by('-created')
     serializer_class = TodoappSerializers
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['is_important','status','color']
 
     def list(self, request, *args, **kwargs):
         queryset = self.filter_queryset(self.get_queryset())
-
+        
         page = self.paginate_queryset(queryset)
         if page is not None:
             serializer = self.get_serializer(page, many=True)
@@ -30,6 +30,7 @@ class TodoListCreateview(generics.ListCreateAPIView):
         }
         return Response(response)
     
+
     
 
 

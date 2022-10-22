@@ -24,6 +24,7 @@ class Todoapp(models.Model):
     deadline = models.DateTimeField(null=True,blank=True)
     color = models.CharField(max_length = 15,choices = color_choice,default = "BLACK")
     is_important = models.BooleanField(default=False)
+    created = models.DateTimeField(auto_now=True,blank=True)
 
     
 
