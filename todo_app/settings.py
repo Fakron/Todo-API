@@ -65,7 +65,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:3000",
     "https://fulltodo.netlify.app",
     "https://todo-api-production-59d5.up.railway.app",
-    'https://todo-app-aqi3.onrender.com/',
+    'https://todo-app-aqi3.onrender.com',
 ]
 
 ROOT_URLCONF = "todo_app.urls"
