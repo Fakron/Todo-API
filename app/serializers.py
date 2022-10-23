@@ -14,6 +14,7 @@ class TodoappSerializers(serializers.ModelSerializer):
             'color',
             'isImportant',
             'created',
+            'updated',
             )
 
         
