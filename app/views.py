@@ -35,10 +35,6 @@ class TodoListCreateview(generics.ListCreateAPIView):
         return Response(response)
 
     
-    
-
-    
-
 
 class TodoDetailView(generics.RetrieveUpdateDestroyAPIView):
 
