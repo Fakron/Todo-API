@@ -71,7 +71,6 @@ REST_FRAMEWORK = {
 
 AUTHENTICATION_BACKENDS = (
     # Others auth providers (e.g. Facebook, OpenId, etc)
-    
 
     # Google OAuth2
     'social_core.backends.google.GoogleOAuth2',
