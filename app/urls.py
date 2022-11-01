@@ -1,8 +1,8 @@
 from pipes import Template
 from django.urls import path
-from .views import (TodoListCreateview,TodoDetailView,)
+from .views import (TodoListCreateview, TodoDetailView, )
 
 urlpatterns = [
-    path("",TodoListCreateview.as_view(),name="Todo-list"),
-    path("<int:pk>/",TodoDetailView.as_view(),name="Todo-detail"),
+    path("todo/", TodoListCreateview.as_view(), name="Todo-list"),
+    path("todo/<int:pk>/", TodoDetailView.as_view(), name="Todo-detail"),
 ]

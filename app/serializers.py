@@ -1,10 +1,12 @@
-from . models import Todoapp
+from .models import Todoapp
 from rest_framework import serializers
 
+
 class TodoappSerializers(serializers.ModelSerializer):
-    isImportant = serializers.BooleanField(source ='is_important')
+    isImportant = serializers.BooleanField(source='is_important')
+
     class Meta:
-        model =  Todoapp
+        model = Todoapp
         fields = (
             'id',
             'title',
@@ -15,7 +17,5 @@ class TodoappSerializers(serializers.ModelSerializer):
             'isImportant',
             'created',
             'updated',
-            )
-
-        
-
+            'user_id'
+        )
